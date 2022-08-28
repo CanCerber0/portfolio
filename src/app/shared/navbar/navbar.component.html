@@ -1,0 +1,35 @@
+<div class="navbar flex" id="navbar">
+    <div class="navbar_btn flex" (click)="clickBtn()" (mouseover)="overBtn()" (mouseleave)="leaveBtn()">
+        <div id="bar" class="navbar_btn-bar flex">
+            <div class="navbar_btn-bar-inner"></div>
+            <div class="navbar_btn-bar-inner"></div>
+        </div>
+        <div id="bar2" class="navbar_btn-bar2 flex">
+            <div id="bar2-inner" class="navbar_btn-bar2-inner"></div>
+            <div id="bar2-inner2" class="navbar_btn-bar2-inner"></div>
+        </div>
+        <div id="bar3" class="navbar_btn-bar3 flex">
+            <div class="navbar_btn-bar3-inner"></div>
+            <div class="navbar_btn-bar3-inner"></div>
+        </div>
+    </div>
+    <div id="list" class="navbar_list flex">
+        <ul class="flex" *ngIf="!slide">
+            <li class="flex"><a href="">Sobre Mi</a>
+                <hr>
+            </li>
+            <li class="flex"><a href="">Educación</a>
+                <hr>
+            </li>
+            <li class="flex"><a href="">Cursos</a>
+                <hr>
+            </li>
+            <li class="flex"><a href="">Experiencia</a>
+                <hr>
+            </li>
+            <li class="flex"><a href="">Portfolio</a>
+                <hr>
+            </li>
+        </ul>
+    </div>
+</div>

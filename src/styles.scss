@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('../src/assets/fonts/static/RobotoMono-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+$first-color: #000000;
+$second-color: #f1ae00;
+$third-color: #63686b;
+$hlight-color: #ffffff;
+$shadow: #393939;
+$Roboto: 'Roboto Mono';
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.block{
+    display: block;
+}
+.hide{
+    display: none;
+}

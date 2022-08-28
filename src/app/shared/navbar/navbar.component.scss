@@ -1,0 +1,163 @@
+@import '../../../styles.scss';
+@keyframes slide {
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 90vh;
+    }
+}
+@keyframes slideout {
+    0%{
+        height: 90vh;
+    }
+    100%{
+        height: 0%;
+    }
+}
+.deg45{
+    transform: rotate(45deg);
+    position: absolute;
+    transition: all .2s ease;
+}
+.deg135{
+    transform: rotate(135deg);
+    position: absolute;
+    transition: all .2s ease;
+}
+.vanish{
+    opacity: 0;
+    position: absolute;
+    transition: all .2s ease;
+}
+.slidein{
+    animation: slide .3s ease;
+    height: 90vh;
+    width: 100%;
+    background: $second-color;
+    opacity: 0.8;
+    z-index: 6;
+    top: 10vh;
+}
+.slideout{
+    height: 0vh;
+    width: 100%;
+    background: $second-color;
+    opacity: 0.8;
+    z-index: 6;
+    top: 10vh;
+    animation: slideout .2s ease;
+}
+
+.navbar{
+    height: 10vh;
+    background: $second-color;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &_btn{
+        width: 3rem;
+        height: 3rem;
+        transition: all .2s ease-in;
+        border-radius: 5%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        &-bar{
+            transition: all .3s ease;
+            width: 75%;
+            height: 7.5%;
+            &-inner{
+                width: 30%;
+                border-radius:10%;
+                background: $first-color;
+            }
+            &-inner:nth-child(2){
+                width: 70%;
+                border-radius:10%;
+                background: $hlight-color;
+            }
+        }
+        &-bar2{
+            opacity: 1;
+            transition: all .2s ease;
+            width: 75%;
+            height: 7.5%;
+            &-inner{
+                transition: all .2s ease;
+                width: 50%;
+                border-radius:10%;
+                background: $first-color;
+            }
+            &-inner:nth-child(2){
+                transition: all .2s ease;
+                width: 50%;
+                border-radius:10%;
+                background: $hlight-color;
+            }
+        }
+        &-bar3{
+            transition: all .3s ease;
+            width: 75%;
+            height: 7.5%;
+            &-inner{
+                width: 70%;
+                border-radius:10%;
+                background: $first-color;
+            }
+            &-inner:nth-child(2){
+                width: 30%;
+                border-radius:10%;
+                background: $hlight-color;
+            }
+        }
+    }
+    &_btn:hover{
+        cursor: pointer;
+    }
+    &_btn:active{
+    }
+    &_list{
+        position: absolute;
+        justify-content: center;
+        ul{
+            width: 65%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            li{
+                padding: 0;
+                list-style: none;
+                flex-direction: column;
+                justify-content: center;
+                a{
+                    font-family: $Roboto;
+                    font-size: 48px;
+                    text-align: justify;
+                    color: $hlight-color;
+                    text-decoration: none;
+                    transition: all .3s ease;
+                }
+                hr{
+                    transition: all .3s ease;
+                    width: 0;
+                    border: 2px solid $hlight-color;
+                    opacity: 0;
+                }
+            }
+            li:hover{
+                a{
+                    color: $first-color;
+                    transition: all .3s ease;
+                }
+                hr{
+                    transition: all .3s ease;
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
