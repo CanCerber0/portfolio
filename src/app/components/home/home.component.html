@@ -1,0 +1,112 @@
+<section id="es" *ngIf="language">
+    <div class="home open flex center" id="home">
+        <div id="desktop" class="home_container">
+            <div id="circle" class="home_container-circle flex" (mouseenter)="pump()" (mouseleave)="clean()">
+                <div class="home_container-circle-out">
+                </div>
+                <div class="home_container-circle-in" (click)="desplegar()">
+                </div>
+            </div>
+            <div id="content" class="home_container_content" *ngIf="open">
+                <div class="home_container_content-desktop flex">
+                    <div class="home_container_content-desktop-about" @despliegue1>
+                        <div class="home_container_content-desktop-about-arrow">
+                            <a routerLink="/about">Sobre Mi</a>
+                        </div>
+                        <div class="home_container_content-desktop-about-icon">
+                            <i class="bi bi-person-square"></i>
+                        </div>
+                    </div>
+                    <div class="home_container_content-desktop-education" @despliegue2>
+                        <div class="home_container_content-desktop-education-arrow">
+                            <a routerLink="/education">Educación</a>
+                        </div>
+                        <div class="home_container_content-desktop-education-icon">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                    </div>
+                    <div class="home_container_content-desktop-contact" @despliegue3>
+                        <div class="home_container_content-desktop-contact-arrow">
+                            <a routerLink="/contact">Contacto</a>
+                        </div>
+                        <div class="home_container_content-desktop-contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                    </div>
+                    <div class="home_container_content-desktop-experience" @despliegue4>
+                        <div class="home_container_content-desktop-experience-arrow">
+                                <a routerLink="/experience">Experiencia</a>
+                        </div>
+                        <div class="home_container_content-desktop-experience-icon">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                    </div>
+                    <div class="home_container_content-desktop-portfolio" @despliegue5>
+                        <div class="home_container_content-desktop-portfolio-arrow">
+                            <a routerLink="/portfolio">Proyectos</a>
+                        </div>
+                        <div class="home_container_content-desktop-portfolio-icon">
+                            <i class="bi bi-calendar2-check-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="en" *ngIf="!language">
+    <div class="home open flex center" id="home">
+        <div id="desktop" class="home_container">
+            <div id="circle" class="home_container-circle flex" (mouseenter)="pump()" (mouseleave)="clean()">
+                <div class="home_container-circle-out">
+                </div>
+                <div class="home_container-circle-in" (click)="desplegar()">
+                </div>
+            </div>
+            <div id="content" class="home_container_content" *ngIf="open">
+                <div class="home_container_content-desktop flex">
+                    <div class="home_container_content-desktop-about" @despliegue1>
+                        <div class="home_container_content-desktop-about-arrow">
+                            <a routerLink="/about">About Me</a>
+                        </div>
+                        <div class="home_container_content-desktop-about-icon">
+                            <i class="bi bi-person-square"></i>
+                        </div>
+                    </div>
+                    <div class="home_container_content-desktop-education" @despliegue2>
+                        <div class="home_container_content-desktop-education-arrow">
+                            <a routerLink="/education">Education</a>
+                        </div>
+                        <div class="home_container_content-desktop-education-icon">
+                            <i class="bi bi-mortarboard-fill"></i>
+                        </div>
+                    </div>
+                    <div class="home_container_content-desktop-contact" @despliegue3>
+                        <div class="home_container_content-desktop-contact-arrow">
+                            <a routerLink="/contact">Contact</a>
+                        </div>
+                        <div class="home_container_content-desktop-contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                    </div>
+                    <div class="home_container_content-desktop-experience" @despliegue4>
+                        <div class="home_container_content-desktop-experience-arrow">
+                                <a routerLink="/experience">Experience</a>
+                        </div>
+                        <div class="home_container_content-desktop-experience-icon">
+                            <i class="bi bi-gear"></i>
+                        </div>
+                    </div>
+                    <div class="home_container_content-desktop-portfolio" @despliegue5>
+                        <div class="home_container_content-desktop-portfolio-arrow">
+                            <a routerLink="/portfolio">Portfolio</a>
+                        </div>
+                        <div class="home_container_content-desktop-portfolio-icon">
+                            <i class="bi bi-calendar2-check-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

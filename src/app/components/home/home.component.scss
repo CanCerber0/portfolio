@@ -1,0 +1,797 @@
+@import '../../../styles.scss';
+@keyframes grow {
+    0%{
+        transform: scale(1);
+        transition: all .2s ease;
+    }
+    50%{
+        transform: scale(1.1);
+        transition: all .2s ease;
+    }
+    100%{
+        transform: scale(1);
+        transition: all .2s ease;
+    }
+}
+.grow{
+    .home_container-circle-out{
+        animation: grow .6s ease;
+    }
+    .home_container-circle-in{
+        animation: grow .6s ease;
+    }
+}
+
+.hide{
+    display: none;
+}
+.open{
+    height: 66vh;
+    transition: all .3s ease;
+}
+.close{
+    height: 86vh;
+    transition: all .3s ease;
+}
+.home{
+    background: $first-color;
+    justify-content: center;
+    align-items: center;
+    &_container{
+        &-circle{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+            &-out{
+                width: 100%;
+                height: 100%;
+                border: 7.5px solid $third-color;
+                border-radius: 50%;
+                position: absolute;
+            }
+            &-in{
+                width: 85%;
+                height: 85%;
+                border: 7.5px solid $second-color;
+                border-radius: 50%;
+                position: absolute;
+                background-image: url('../../../assets/images/centerImg.jpg');
+                background-size: cover;
+                cursor: pointer;
+                transition: all .3s ease;
+            }
+        }
+        &-circle:active{
+            .home_container-circle-in{
+                transition: all .1s ease;
+                transform: scale(.95);
+            }
+        }
+        &_content{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            &-desktop{
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                &-about{
+                    position: absolute;
+                    top: 25%;
+                    left: 25%;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                    }
+                }
+                &-about:hover{
+                    color: $second-color;
+                }
+                &-education{
+                    position: absolute;
+                    top: 45%;
+                    left: 15%;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                    }
+                }
+                &-education:hover{
+                    color: $second-color;
+                }
+                &-contact{
+                    position: absolute;
+                    top: 15%;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                        i:hover{
+                        transition: all 1s ease;
+                            color: $second-color;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                    }
+                }
+                &-contact:hover{
+                    color: $second-color;
+                }
+                &-experience{
+                    position: absolute;
+                    top: 25%;
+                    right: 25%;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease
+                        }
+                        i:hover{
+                        transition: all 1s ease;
+                            color: $second-color;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                    }
+                }
+                &-experience:hover{
+                    color: $second-color;
+                }
+                &-portfolio{
+                    position: absolute;
+                    top: 45%;
+                    right: 15%;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease
+                        }
+                        i:hover{
+                        transition: all 1s ease;
+                            color: $second-color;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                    }
+                }
+                &-portfolio:hover{
+                    color: $second-color;
+                }
+                &-contact{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease
+                        }
+                        i:hover{
+                        transition: all 1s ease;
+                            color: $second-color;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                    }
+                }
+                &-contact:hover{
+                    color: $second-color;
+                }
+            }
+            &-tablet{
+                display: none;
+                height: 100%;
+                &-about{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease
+                        }
+                        i:hover{
+                        transition: all 1s ease;
+                            color: $second-color;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                    }
+                }
+                &-about:hover{
+                    color: $second-color;
+                }
+                &-education{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                    }
+                }
+                &-education:hover{
+                    color: $second-color;
+                }
+                &-contact{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-contact:hover{
+                color: $second-color;}
+                &-experience{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-experience:hover{
+                color: $second-color;}
+                &-portfolio{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-portfolio:hover{
+                color: $second-color;}
+                &-contact{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-contact:hover{
+                color: $second-color;}
+            }
+            &-mobile{
+                display: none;
+                height: 100%;
+                &-about{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-about:hover{
+                color: $second-color;}
+                &-education{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-education:hover{
+                color: $second-color;}
+                &-contact{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-contact:hover{
+                color: $second-color;}
+                &-experience{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-experience:hover{
+                color: $second-color;}
+                &-portfolio{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-portfolio:hover{
+                color: $second-color;}
+                &-contact{
+                    position: absolute;
+                    &-arrow{
+                        width: 200px;
+                        position:absolute;
+                        top: 125%;
+                        left: -150%;
+                        a{
+                            font-size: 36px;
+                            color: $third-color;
+                            text-decoration: none;
+                        }
+                    }
+                    &-arrow:hover{
+                        a{
+                            font-size: 36px;
+                            text-decoration: none;
+                        }
+                    }
+                    &-icon{
+                        transition: all .7s ease;
+                        i{
+                            font-size: 36px;
+                            transition: all .5s ease;
+                        }
+                    }
+                    &-icon:hover{
+                        cursor: pointer;
+                        transition: all .5s ease;
+                    }
+                    &-icon:active{
+                        transition: all .5s ease;
+                        transform: scale(.9);
+                        }
+                }
+                &-contact:hover{
+                color: $second-color;}
+            }
+        }
+    }
+}

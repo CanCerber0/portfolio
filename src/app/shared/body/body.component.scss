@@ -3,39 +3,31 @@
     display: none;
 }
 .open{
-    height: 66vh;
+    height: 66.4%;
     transition: all .3s ease;
 }
 .close{
-    height: 86vh;
+    height: 86.4%;
     transition: all .3s ease;
 }
+
 .body{
     background: $first-color;
     justify-content: center;
     align-items: center;
-    &_container{
-        &-circle{
-            width: 250px;
-            height: 250px;
-            position: relative;
-            justify-content: center;
-            align-items: center;
-            &-out{
-                width: 100%;
-                height: 100%;
-                border: 7.5px solid $third-color;
-                border-radius: 50%;
-                position: absolute;
-            }
-            &-in{
-                width: 85%;
-                height: 85%;
-                border: 7.5px solid $second-color;
-                border-radius: 50%;
-                position: absolute;
-
-            }
+    &_language{
+        width: 90px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 15%;
+        right: 10%;
+        span{
+            font-size: 18px;
+            color: $second-color;
+            font-weight: 600;
         }
     }
+
 }

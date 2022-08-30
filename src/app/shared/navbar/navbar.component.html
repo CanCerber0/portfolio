@@ -15,19 +15,22 @@
     </div>
     <div id="list" class="navbar_list flex">
         <ul class="flex" *ngIf="!slide">
-            <li class="flex"><a href="">Sobre Mi</a>
+            <li class="flex"><a routerLink="/home">Inicio</a>
                 <hr>
             </li>
-            <li class="flex"><a href="">Educación</a>
+            <li class="flex"><a routerLink="/about">Sobre Mi</a>
                 <hr>
             </li>
-            <li class="flex"><a href="">Cursos</a>
+            <li class="flex"><a routerLink="/education">Educación</a>
                 <hr>
             </li>
-            <li class="flex"><a href="">Experiencia</a>
+            <li class="flex"><a routerLink="/portfolio">Portfolio</a>
                 <hr>
             </li>
-            <li class="flex"><a href="">Portfolio</a>
+            <li class="flex"><a routerLink="/experience">Experiencia</a>
+                <hr>
+            </li>
+            <li class="flex"><a routerLink="/contact">Contacto</a>
                 <hr>
             </li>
         </ul>

@@ -1,29 +1,12 @@
-<div class="body open flex" id="body">
-    <div id="mobile" class="body_container">
-        <div class="body_container-circle flex">
-            <div class="body_container-circle-out">
-            </div>
-            <div class="body_container-circle-in">
-    
-            </div>
-        </div>
+<section id="body" class="body flex open" >
+    <div class="body_language flex">
+        <span>ES</span>
+        <mat-slide-toggle 
+        [color]="color"
+        (toggleChange)="toggle()"
+        >
+        </mat-slide-toggle>
+        <span>EN</span>
     </div>
-    <div id="tablet" class="body_container">
-        <div class="body_container-circle flex">
-            <div class="body_container-circle-out">
-            </div>
-            <div class="body_container-circle-in">
-    
-            </div>
-        </div>
-    </div>
-    <div id="dekstop" class="body_container">
-        <div class="body_container-circle flex">
-            <div class="body_container-circle-out">
-            </div>
-            <div class="body_container-circle-in">
-    
-            </div>
-        </div>
-    </div>
-</div>
+    <router-outlet (data)="language"></router-outlet>
+</section>

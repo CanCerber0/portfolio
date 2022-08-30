@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FooterToggle } from 'src/app/models/footer';
+import { Component, OnInit } from '@angular/core';
+import { IdiomaService } from 'src/app/services/idioma.service';
 
 @Component({
   selector: 'app-body',
@@ -8,8 +8,13 @@ import { FooterToggle } from 'src/app/models/footer';
 })
 export class BodyComponent implements OnInit {
   open!:boolean;
-
-  constructor() { }
+  color:string = "primary";
+  language:boolean;
+  constructor(
+    private langSvc: IdiomaService
+  ) { 
+    this.language = true;
+  }
 
   ngOnInit(): void {
     this.screenSelector()
@@ -29,6 +34,18 @@ export class BodyComponent implements OnInit {
     } else if(screenWidth<480){
       tablet?.setAttribute('class', 'hide')
       dekstop?.setAttribute('class', 'hide')
+    }
+  }
+
+  toggle(){
+    if(this.language == true){
+      this.language = !this.language;
+      this.langSvc.idioma.emit({data: this.language})
+      console.log(this.language)
+    } else {
+      this.language = !this.language;
+      this.langSvc.idioma.emit({data:this.language})
+      console.log(this.language)
     }
   }
 }
